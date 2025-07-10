@@ -90,6 +90,29 @@ class _DocvedaLoginFormState extends State<DocvedaLoginForm> {
       String username = usernameController.text.trim();
       String password = passwordController.text.trim();
 
+      // Separate validation for username and password with more descriptive error messages
+      if (username.length > 10) {
+        Get.snackbar(
+          "Username Error",
+          "Username must be less than 10 characters",
+          snackPosition: SnackPosition.BOTTOM,
+          backgroundColor: DocvedaColors.warning,
+          colorText: DocvedaColors.white,
+        );
+        return;
+      }
+
+      if (password.length > 16) {
+        Get.snackbar(
+          "Password Error",
+          "Password must be less than 16 characters",
+          snackPosition: SnackPosition.BOTTOM,
+          backgroundColor: DocvedaColors.warning,
+          colorText: DocvedaColors.white,
+        );
+        return;
+      }
+
       final pkceKeys = PKCEKeys.generatePKCEKeys();
       String codeVerifier = pkceKeys["code_verifier"] ?? "";
       String codeChallenger = pkceKeys["code_challenge"] ?? "";

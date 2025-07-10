@@ -5,7 +5,7 @@ import 'package:http/http.dart' as http;
 import 'package:docveda_app/utils/helpers/unauthorized_helper.dart';
 
 class ApiService {
-  //  static const String baseUrl = 'http://192.168.0.101:4000/api';
+  // static const String baseUrl = 'http://192.168.10.132:4000/api';
   // static const String baseUrl = 'https://api-uat-dv.docveda.in/api';
   static const String baseUrl = 'https://app.docveda.in/api';
 

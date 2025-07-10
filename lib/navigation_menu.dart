@@ -1,5 +1,6 @@
 import 'package:docveda_app/features/clinic/screens/home/analytics/analytics.dart';
 import 'package:docveda_app/features/clinic/screens/home/notifications/notifications.dart';
+import 'package:docveda_app/features/clinic/screens/profileScreen/profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
@@ -18,7 +19,8 @@ class NavigationMenu extends StatelessWidget {
     final FirebaseAnalytics analytics = FirebaseAnalytics.instance;
     FirebaseAnalytics.instance.setAnalyticsCollectionEnabled(true);
 
-    List pageNames = ['Analytics', 'Dashboard', 'Notifications'];
+    // List pageNames = ['Analytics', 'Dashboard', 'Notifications'];
+    List pageNames = ['Dashboard', 'ProfileScreen'];
 
     return Scaffold(
       bottomNavigationBar: Container(
@@ -67,18 +69,19 @@ class NavigationMenu extends StatelessWidget {
                 16,
               ), // Rounded background for selected item
             ),
+
             destinations: [
-              NavigationDestination(
-                icon: Icon(
-                  Iconsax.chart_1,
-                  color: DocvedaColors.primaryColor,
-                ), // Default icon color
-                selectedIcon: Icon(
-                  Iconsax.chart_1,
-                  color: DocvedaColors.white,
-                ), // Selected icon color
-                label: 'Analytics',
-              ),
+              // NavigationDestination(
+              //   icon: Icon(
+              //     Iconsax.chart_1,
+              //     color: DocvedaColors.primaryColor,
+              //   ), // Default icon color
+              //   selectedIcon: Icon(
+              //     Iconsax.chart_1,
+              //     color: DocvedaColors.white,
+              //   ), // Selected icon color
+              //   label: 'Analytics',
+              // ),
               NavigationDestination(
                 icon:
                     Icon(Iconsax.element_3, color: DocvedaColors.primaryColor),
@@ -87,11 +90,9 @@ class NavigationMenu extends StatelessWidget {
                 label: 'Dashboard',
               ),
               NavigationDestination(
-                icon: Icon(Iconsax.notification,
-                    color: DocvedaColors.primaryColor),
-                selectedIcon:
-                    Icon(Iconsax.notification, color: DocvedaColors.white),
-                label: 'Notifications',
+                icon: Icon(Iconsax.user, color: DocvedaColors.primaryColor),
+                selectedIcon: Icon(Iconsax.user, color: DocvedaColors.white),
+                label: 'Profile',
               ),
             ],
           ),
@@ -107,8 +108,9 @@ class NavigationController extends GetxController {
 
   final screens = [
     // Dischargescreen(),
-    AnalyticsScreen(),
+    // AnalyticsScreen(),
     HomeScreen(), // Pass accessToken here
-    NotificationsScreen(),
+    ProfileScreen(), // Pass accessToken
+    // NotificationsScreen(),
   ];
 }

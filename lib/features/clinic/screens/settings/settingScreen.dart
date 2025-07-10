@@ -67,28 +67,28 @@ class _SettingScreenState extends State<SettingScreen> {
                 const Divider(),
 
                 // Notifications
-                ListTile(
-                  leading:
-                      Icon(Iconsax.notification, color: DocvedaColors.primary),
-                  title: const DocvedaText(text: DocvedaTexts.notifications),
-                  subtitle:
-                      const DocvedaText(text: DocvedaTexts.notificationsDesc),
-                  // trailing: const Icon(Icons.arrow_forward_ios,
-                  //     size: DocvedaSizes.fontSizeMd),
-                  onTap: () => Get.to(const NotificationsScreen()),
-                ),
-                const Divider(),
+                // ListTile(
+                //   leading:
+                //       Icon(Iconsax.notification, color: DocvedaColors.primary),
+                //   title: const DocvedaText(text: DocvedaTexts.notifications),
+                //   subtitle:
+                //       const DocvedaText(text: DocvedaTexts.notificationsDesc),
+                //   // trailing: const Icon(Icons.arrow_forward_ios,
+                //   //     size: DocvedaSizes.fontSizeMd),
+                //   onTap: () => Get.to(const NotificationsScreen()),
+                // ),
+                // const Divider(),
 
                 // Analytics
-                ListTile(
-                  leading: Icon(Iconsax.chart, color: DocvedaColors.primary),
-                  title: const Text(DocvedaTexts.analytics),
-                  subtitle: const Text(DocvedaTexts.analyticsDesc),
-                  // trailing: const Icon(Icons.arrow_forward_ios,
-                  //     size: DocvedaSizes.fontSizeMd),
-                  onTap: () => Get.to(const AnalyticsScreen()),
-                ),
-                const Divider(),
+                // ListTile(
+                //   leading: Icon(Iconsax.chart, color: DocvedaColors.primary),
+                //   title: const Text(DocvedaTexts.analytics),
+                //   subtitle: const Text(DocvedaTexts.analyticsDesc),
+                //   // trailing: const Icon(Icons.arrow_forward_ios,
+                //   //     size: DocvedaSizes.fontSizeMd),
+                //   onTap: () => Get.to(const AnalyticsScreen()),
+                // ),
+                // const Divider(),
 
                 // Change Password
                 // ListTile(

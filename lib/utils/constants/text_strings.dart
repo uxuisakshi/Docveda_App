@@ -69,7 +69,7 @@ class DocvedaTexts {
   // Settings
   static const String settings = "Settings";
   static const String profile = "Profile";
-  static const String profileDesc = "Manage your profile details";
+  static const String profileDesc = "View your profile details";
   static const String notifications = "Notifications";
   static const String notificationsDesc = "Notification preferences";
   static const String analytics = "Analytics";

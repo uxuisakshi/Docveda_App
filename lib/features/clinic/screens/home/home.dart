@@ -128,6 +128,7 @@ class _HomeScreenState extends State<HomeScreen> {
         Get.offAll(() => const LoginScreen());
       });
     }
+    print("Profile data: $profileData");
   }
 
   Future<List<Map<String, dynamic>>> fetchDashboardData({

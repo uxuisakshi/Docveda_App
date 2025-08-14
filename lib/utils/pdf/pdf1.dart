@@ -134,7 +134,8 @@ Future<void> generateAndShowPdf(
           patient['UHID No'] ?? '--',
           DateFormatter.formatDate(patient['Admission Date']),
           DateFormatter.formatDate(patient['Discharge Date']),
-          FormatAmount.formatAmount(patient['Bill Amount']?.toString() ?? '0',
+          FormatAmount.formatAmount(
+              patient['Total IPD Bill']?.toString() ?? '0',
               showSymbol: false),
         ]);
         break;

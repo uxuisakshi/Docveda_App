@@ -57,7 +57,7 @@ class _DiscountsScreenState extends State<DiscountsScreen> {
     final toggleController = Get.find<ToggleController>();
 
     setState(() {
-          selectedPatientIndices.clear();
+      selectedPatientIndices.clear();
 
       final isMonthlyToggle = toggleController.isMonthly.value;
       patientData = fetchDiscountData(
@@ -358,7 +358,7 @@ class _DiscountsScreenState extends State<DiscountsScreen> {
                                                 const SizedBox(height: 4),
                                                 DocvedaText(
                                                   text: patient[
-                                                          "Date Of Discount"],
+                                                      "Date Of Discount"],
                                                   style: TextStyleFont.caption,
                                                   maxLines: 1,
                                                   overflow:
@@ -386,8 +386,9 @@ class _DiscountsScreenState extends State<DiscountsScreen> {
                                             ),
                                           ),
                                           DocvedaText(
-                                            text:
-                                                FormatAmount.formatAmount(patient["Discount Amount"] ?? "0"),
+                                            text: FormatAmount.formatAmount(
+                                                patient["Discount Amount"] ??
+                                                    "0"),
                                             style: TextStyleFont.body.copyWith(
                                               fontWeight: FontWeight.bold,
                                               fontSize: 16,
@@ -453,9 +454,10 @@ class _DiscountsScreenState extends State<DiscountsScreen> {
                                   admissionDate:
                                       patient['Admission Date'] ?? '',
                                   discountAmount: FormatAmount.formatAmount(
-                                      patient['Discount Amount'] ?.toString() ?? '0',
-              showSymbol: false),
-                                  dateOfDiscount: 
+                                      patient['Discount Amount']?.toString() ??
+                                          '0',
+                                      showSymbol: false),
+                                  dateOfDiscount:
                                       patient['Date Of Discount'] ?? '',
                                 ),
                               ),

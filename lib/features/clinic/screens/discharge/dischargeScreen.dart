@@ -70,7 +70,7 @@ class _DischargescreenState extends State<Dischargescreen> {
         Get.find<ToggleController>(); // Access the global toggle state
 
     setState(() {
-          selectedPatientIndices.clear();
+      selectedPatientIndices.clear();
 
       final isMonthlyToggle = toggleController.isMonthly.value;
       patientData = fetchDashboardData(
@@ -372,8 +372,8 @@ class _DischargescreenState extends State<Dischargescreen> {
                                                 ),
                                                 const SizedBox(height: 4),
                                                 DocvedaText(
-                                                  text: patient[
-                                                          "Admission Date"],
+                                                  text:
+                                                      patient["Admission Date"],
                                                   style: TextStyleFont.caption,
                                                   maxLines: 1,
                                                   overflow:
@@ -403,8 +403,8 @@ class _DischargescreenState extends State<Dischargescreen> {
                                                 ),
                                                 const SizedBox(height: 4),
                                                 DocvedaText(
-                                                  text:patient[
-                                                          "Discharge Date"],
+                                                  text:
+                                                      patient["Discharge Date"],
                                                   style: TextStyleFont.caption,
                                                   maxLines: 1,
                                                   overflow:
@@ -500,20 +500,25 @@ class _DischargescreenState extends State<Dischargescreen> {
                                       patient['Admission Date'] ?? '',
                                   dischargeDate:
                                       patient['Discharge Date'] ?? '',
-                               deposit: FormatAmount.formatAmount(patient['Deposit']?.toString() ?? '0',
-              showSymbol: false),
-                              finalSettlement: FormatAmount.formatAmount(
-                                  patient['Final Settlement']?.toString() ?? '0',
-              showSymbol: false),
-                              totalIpdBill: FormatAmount.formatAmount(
-                                  patient['Total IPD Bill'] ?.toString() ?? '0',
-              showSymbol: false),
-                                     refundAmount: FormatAmount.formatAmount(
-                                  patient['Refund Amount'] ?.toString() ?? '0',
-              showSymbol: false),
-                              discountAmount: FormatAmount.formatAmount(
-                                  patient['Discount Amount'] ?.toString() ?? '0',
-              showSymbol: false),
+                                  deposit: FormatAmount.formatAmount(
+                                      patient['Deposit']?.toString() ?? '0',
+                                      showSymbol: false),
+                                  finalSettlement: FormatAmount.formatAmount(
+                                      patient['Final Settlement']?.toString() ??
+                                          '0',
+                                      showSymbol: false),
+                                  totalIpdBill: FormatAmount.formatAmount(
+                                      patient['Total IPD Bill']?.toString() ??
+                                          '0',
+                                      showSymbol: false),
+                                  refundAmount: FormatAmount.formatAmount(
+                                      patient['Refund Amount']?.toString() ??
+                                          '0',
+                                      showSymbol: false),
+                                  discountAmount: FormatAmount.formatAmount(
+                                      patient['Discount Amount']?.toString() ??
+                                          '0',
+                                      showSymbol: false),
                                 ),
                               ),
                             );
